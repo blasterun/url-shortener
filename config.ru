@@ -1,11 +1,8 @@
-require "rubygems"
-require "sinatra"
-# require 'open3'
+require 'rubygems'
+require 'sinatra'
 require 'pry'
-# require 'yaml'
-# require_relative './app/index.rb'
-# require_relative './lib/index.rb'
 
-require File.expand_path '../main.rb', __FILE__
+
+require File.expand_path '../app.rb', __FILE__
 
 run App

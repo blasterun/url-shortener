@@ -1,25 +1,14 @@
-Style/AlignParameters:
-  EnforcedStyle: with_fixed_indentation
+AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - 'spec/**/*'
+    - 'Gemfile'
+    - 'Rakefile'
+    - 'config.ru'
 
+Style/FrozenStringLiteralComment:
+  Enabled: false
 Style/Documentation:
   Enabled: false
-
-Style/FileName:
-  Enabled: false
-
-Style/HashSyntax:
-  Enabled: true
-  EnforcedStyle: hash_rockets
-
-Style/IfUnlessModifier:
-  Enabled: false
-
-Style/MethodCallParentheses:
-  Enabled: false
-
-Style/RedundantSelf:
-  Enabled: false
-
-Style/StringLiterals:
-  Enabled: true
-  EnforcedStyle: double_quotes
+Metrics/LineLength:
+  Max: 120
