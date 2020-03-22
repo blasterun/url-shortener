@@ -10,12 +10,12 @@ You can use UI or endpoin to get short url.
 
 post `/` with required param `{ url: 'https://example.com' }`
 
-and you wull get response
+with example response:
 
 `{short_url: '/abc123', url: 'https://example.com' }`.
 
 
-## Runing with Docker
+## Running with Docker
 
 ```
 $ docker pull amatchyshyn/url_shortener
@@ -24,7 +24,7 @@ $ docker run --rm -p 4000:4000 --name url_shortener amatchyshyn/url_shortener
 ```
 
 
-## Run test and rubocop
+## Run tests and rubocop
 
 `rake test`
 

@@ -1,7 +1,6 @@
 AllCops:
   TargetRubyVersion: 2.3
   Exclude:
-    - 'spec/**/*'
     - 'Gemfile'
     - 'Rakefile'
     - 'config.ru'
@@ -12,3 +11,5 @@ Style/Documentation:
   Enabled: false
 Metrics/LineLength:
   Max: 120
+Style/MixinUsage:
+  Enabled: false
