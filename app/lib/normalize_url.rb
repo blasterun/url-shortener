@@ -1,15 +1,15 @@
 class NormalizeUrl
-  def self.execute(url)
-    new(url).execute
-  end
-
   attr_accessor :url
+
+  def self.normalize(url)
+    new(url).normalize
+  end
 
   def initialize(raw_url)
     @url = raw_url
   end
 
-  def execute
+  def normalize
     return url if url.start_with?('http')
 
     sanitaize

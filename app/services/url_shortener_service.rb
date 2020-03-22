@@ -12,7 +12,7 @@ class UrlShortenerService
 
   def execute
     normalize_url
-    generate_key
+    generate_short_code
     save_result
     respond
   end
@@ -27,11 +27,11 @@ class UrlShortenerService
     storage.save(key: short_code, url: original_url)
   end
 
-  def generate_key
+  def generate_short_code
     self.short_code = generator.generate
   end
 
   def normalize_url
-    self.original_url = url_normalizer.execute(original_url)
+    self.original_url = url_normalizer.normalize(original_url)
   end
 end
