@@ -8,6 +8,7 @@ ADD Gemfile.lock /app/Gemfile.lock
 RUN bundle install
 COPY . /app
 
-EXPOSE 3000
+EXPOSE 4000
 
-CMD ["rackup", "-p", "3000", "-b", "0.0.0.0"]
+CMD ["bundle", "exec", "rackup", "--host", "0.0.0.0", "-p", "4000"]
+
