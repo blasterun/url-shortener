@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'sinatra/contrib'
+require 'sinatra/json'
 require 'pry'
 
 

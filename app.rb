@@ -2,6 +2,7 @@ require_relative './app/models/url.rb'
 require_relative './app/lib/normalize_url.rb'
 require_relative './app/lib/url_generator.rb'
 require_relative './app/services/url_shortener_service.rb'
+require 'sinatra/json'
 
 class App < Sinatra::Base
   set :public_folder, File.dirname(__FILE__) + '/static'
