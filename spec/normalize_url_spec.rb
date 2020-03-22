@@ -1,12 +1,6 @@
 require File.expand_path '../test_helper.rb', __FILE__
 
-include Rack::Test::Methods
-
-def app
-  App
-end
-
-describe 'NormalizeUrl' do
+describe NormalizeUrl do
   it "should replace single and double / with http://" do
     assert_equal 'http://example.com', NormalizeUrl.execute('//example.com')
     assert_equal 'http://example.com', NormalizeUrl.execute('/example.com')

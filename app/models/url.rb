@@ -7,7 +7,7 @@ module Models
         @urls[key]
       end
 
-      def add(key:, url:)
+      def save(key:, url:)
         @urls[key] = url
       end
     end

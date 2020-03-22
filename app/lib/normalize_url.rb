@@ -11,6 +11,7 @@ class NormalizeUrl
 
   def execute
     return url if url.start_with?('http')
+
     sanitaize
     append_http
   end
@@ -18,10 +19,10 @@ class NormalizeUrl
   private
 
   def sanitaize
-    self.url = url.gsub(/^\/+/, '') if url =~ /^\/+/
+    self.url = url.gsub(%r{^\/+}, '') if url =~ %r{^\/+}
   end
 
   def append_http
-    self.url = "http://#{self.url}"
+    self.url = "http://#{url}"
   end
 end
