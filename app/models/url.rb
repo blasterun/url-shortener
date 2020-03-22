@@ -7,8 +7,8 @@ module Models
         @urls[key]
       end
 
-      def add(key, value)
-        @urls[key] = value
+      def add(key:, url:)
+        @urls[key] = url
       end
     end
   end

@@ -6,27 +6,31 @@ class UrlShortenerGenerator
   attr_accessor :short_code
 
   def initialize(original_url)
-    @original_url = original_url
+    @original_url = normalize(url)
     @short_code   = nil
   end
 
-  def generate_uniq
-    Models::Url.add(key: set_char, url: original_url)
+  def execute
+    generate_key
+    Models::Url.add(key: short_code, url: original_url)
 
     { key: short_code, url: original_url }
   end
 
   private
 
-  def set_char
+  def generate_key
     loop do
-      short_code = generate_short
-      break if Models::Url.find(@short_code).nil?
+      self.short_code = generate_short
+      break if Models::Url.find(self.short_code).nil?
     end
-    short_code
   end
 
   def generate_short
     PATTERN.gsub(/X/) { AVAILABLE_CHARTERS.sample }
+  end
+
+  def normalize(url)
+    NormalizeUrl.execute(url)
   end
 end
