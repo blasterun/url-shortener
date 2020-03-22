@@ -2,7 +2,9 @@ require_relative './app/models/url.rb'
 require_relative './app/url_shortener_generator.rb'
 require_relative './app/normalize_url.rb'
 
+
 class App < Sinatra::Base
+  set :public_folder, File.dirname(__FILE__) + '/static'
 
   post '/' do
     if params[:url] && !params[:url].empty?

@@ -6,15 +6,14 @@ class UrlShortenerGenerator
   attr_accessor :short_code
 
   def initialize(original_url)
-    @original_url = normalize(url)
+    @original_url = normalize(original_url)
     @short_code   = nil
   end
 
   def execute
     generate_key
     Models::Url.add(key: short_code, url: original_url)
-
-    { key: short_code, url: original_url }
+    { short_url: "/#{short_code}", url: original_url }
   end
 
   private

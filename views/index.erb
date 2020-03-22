@@ -1,1 +1,19 @@
-Hello
+<div class="alert alert-success alert-dismissible js-result-block" style="display: none;" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Well done!</strong> Here yor shor url: <a target="_blank" href="" class="alert-link js-result-link"> </a>
+</div>
+
+<div class="alert alert-danger alert-dismissible js-result-error" style="display: none;" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Oh snap!</strong> Looks like your url is not valid!
+</div>
+
+
+<form>
+  <div class="form-group">
+    <label for="InputUrl">Enter your url</label>
+    <input type="text" class="form-control js-input-url" name='url' id="InputUrl" placeholder="http://example.com">
+  </div>
+
+  <button type="submit" class="btn btn-primary js-submit-url">Submit</button>
+</form>
