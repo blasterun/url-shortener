@@ -8,10 +8,6 @@ class UrlGenerator
     new.generate
   end
 
-  def initizlize
-    @short_url = nil
-  end
-
   def generate
     generate_key
     short_url
